@@ -48,7 +48,7 @@ function App() {
     setError(null);
     try {
       // Fetch a nuestra API local (CORS debe estar habilitado en backend)
-      const respuesta = await fetch('http://localhost:3001/api/sensores');
+      const respuesta = await fetch('/api/sensores');
       
       if (!respuesta.ok) {
         throw new Error(`Error HTTP: ${respuesta.status}`);
@@ -89,7 +89,7 @@ function App() {
     }
 
     try {
-      const respuesta = await fetch('http://localhost:3001/api/sensores', {
+      const respuesta = await fetch('/api/sensores', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json' // Indicamos que enviamos JSON
@@ -119,7 +119,7 @@ function App() {
     }
 
     try {
-      await fetch(`http://localhost:3001/api/sensores/${id}`, {
+      await fetch(`/api/sensores')/${id}`, {
         method: 'DELETE'
       });
       // Actualizamos la lista tras eliminar
